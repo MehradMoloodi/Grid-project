@@ -124,6 +124,10 @@ h4 {
   margin: 0 auto;
   max-width: var(--max-width);
 }
+.section {
+  padding: 5rem 0;
+}
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
@@ -136,10 +140,6 @@ h4 {
   margin-bottom: 1.25rem;
   margin-left: auto;
   margin-right: auto;
-}
-
-.section {
-  padding: 5rem 0;
 }
 .section-title {
   margin-bottom: 4rem;
@@ -296,7 +296,9 @@ h4 {
 .hero-center {
   min-height: calc(100vh - 4.5rem);
   display: grid;
-  place-items: center;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
 .hero-info h4 {
@@ -354,8 +356,8 @@ h4 {
   border-radius: var(--radius);
   position: relative;
 }
-
 .about-center {
+  padding: 1.75rem;
   display: grid;
   gap: 3rem;
 }
@@ -409,4 +411,113 @@ h4 {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+/************PROJECTS***********/
+.bg-color-project{
+  background: var(--clr-3);
+}
+.projects-text{
+  width: 85vw;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.project{
+  background: var(--clr-2);
+  position: relative;
+  margin-bottom:2rem ;
+  border-radius: var(--radius);
+}
+
+.project-info{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  color: var(--clr-7);
+  opacity: 0;
+  transition: var(--transition);
+}
+.project-img{
+  transition: var(--transition);
+  border-radius: var(--radius);
+  height: 15rem;
+  object-fit: cover;
+}
+
+.project:hover .project-info{
+  opacity: 1;
+ 
+}
+.project:hover .project-img{
+  opacity: 0.1;
+}
+
+.project::after{
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.25rem solid var(--clr-7);
+  border-radius: var(--radius);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.project:hover::after{
+  opacity: 1;
+  transform: scale(0.8);
+}
+
+@media screen and (min-width: 676px){
+  .project-center{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 992px){
+  .project-center{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1170px){
+  .project-center{
+    grid-template-rows: 200px 200px;
+    gap: 1rem;
+    grid-template-areas: 
+    "a b b"
+    "a c d";
+  }
+  .project{
+    height: 100%;
+  }
+  .project-img{
+    height: 100%;
+  }
+
+
+
+
+  .project-1{
+    grid-area: a;
+  }
+  .project-2{
+    grid-area: b;
+  }
+  .project-3{
+    grid-area: c;
+  }
+  .project-5{
+    grid-area: d;
+  }
+
+}
+
+
+
+
+
 
