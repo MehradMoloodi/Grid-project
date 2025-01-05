@@ -8,10 +8,14 @@
 /**********FONTS**********/
 @font-face {
   font-family: "vazir";
-  src: url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.eot") format("eot"),
-    url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.ttf") format("truetype"),
-    url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff") format("woff"),
-    url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff2") format("woff2");
+  src: url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.eot")
+      format("eot"),
+    url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.ttf")
+      format("truetype"),
+    url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff")
+      format("woff"),
+    url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff2")
+      format("woff2");
 }
 /**********FONTS**********/
 /********VARIABLES********/
@@ -584,30 +588,28 @@ h4 {
   margin-top: 2rem;
 }
 /*********SKILLS**********/
-.skills{
+.skills {
   background: var(--clr-2);
 }
-.skills h3{
-  color:black;
+.skills h3 {
+  color: black;
   margin: 1.5rem 0;
 }
-.skill{
+.skill {
   margin-bottom: 1.5rem;
 }
-.skill p{
-  color:black;
+.skill p {
+  color: black;
   margin-bottom: 0.5rem 0;
 }
-
-.skill-container{
+.skill-container {
   background: var(--clr-7);
   height: 1rem;
   width: 100%;
   border-radius: var(--radius);
   position: relative;
 }
-
-.skill-value{
+.skill-value {
   position: absolute;
   top: 0;
   left: 0;
@@ -615,9 +617,8 @@ h4 {
   height: 100%;
   border-radius: var(--radius);
 }
-
 .value-40 {
-width: 40%;
+  width: 40%;
 }
 .value-70 {
   width: 70%;
@@ -625,19 +626,26 @@ width: 40%;
 .value-50 {
   width: 50%;
 }
-.skill-text{
- position: absolute; 
- top: -2rem;
- left: 50%;
- transform: translate(-50%);
+.skill-text {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translate(-50%);
 }
-.skill-text-50{
+.skill-text-50 {
   left: 50%;
 }
 
-.skill-text-70{
+.skill-text-70 {
   left: 70%;
 }
-.skill-text-40{
+.skill-text-40 {
   left: 40%;
+}
+@media screen and (min-width:768px) {
+  .skills-center{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
 }
