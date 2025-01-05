@@ -8,10 +8,10 @@
 /**********FONTS**********/
 @font-face {
   font-family: "vazir";
-  src: url("../Fonts/font/vazir-font-v16.1.0/Vazir-Light.eot") format(".eot"),
-    url("../Fonts/font/vazir-font-v16.1.0/Vazir-Light.ttf") format(".ttf"),
-    url("../Fonts/font/vazir-font-v16.1.0/Vazir-Light.woff") format(".woff"),
-    url("../Fonts/font/vazir-font-v16.1.0/Vazir-Light.woff2") format(".woff2");
+  src: url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.eot") format("eot"),
+    url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.ttf") format("truetype"),
+    url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff") format("woff"),
+    url("../Fonts/font/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff2") format("woff2");
 }
 /**********FONTS**********/
 /********VARIABLES********/
@@ -413,53 +413,52 @@ h4 {
 }
 
 /************PROJECTS***********/
-.bg-color-project{
+.bg-color-project {
   background: var(--clr-3);
 }
 
-.project-center{
+.project-center {
   margin-bottom: 2rem;
 }
 
-.projects-text{
+.projects-text {
   width: 85vw;
   max-width: 30rem;
   margin: 0 auto;
 }
 
-.project{
+.project {
   background: var(--clr-2);
   position: relative;
-  margin-bottom:2rem ;
+  margin-bottom: 2rem;
   border-radius: var(--radius);
 }
 
-.project-info{
+.project-info {
   position: absolute;
   top: 50%;
-  left:50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: var(--clr-7);
   opacity: 0;
   transition: var(--transition);
 }
-.project-img{
+.project-img {
   transition: var(--transition);
   border-radius: var(--radius);
   height: 15rem;
   object-fit: cover;
 }
 
-.project:hover .project-info{
+.project:hover .project-info {
   opacity: 1;
- 
 }
-.project:hover .project-img{
+.project:hover .project-img {
   opacity: 0.1;
 }
 
-.project::after{
-  content:"";
+.project::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -471,61 +470,60 @@ h4 {
   transition: var(--transition);
 }
 
-.project:hover::after{
+.project:hover::after {
   opacity: 1;
   transform: scale(0.8);
 }
 
-@media screen and (min-width: 676px){
-  .project-center{
+@media screen and (min-width: 676px) {
+  .project-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
 }
-@media screen and (min-width: 992px){
-  .project-center{
+@media screen and (min-width: 992px) {
+  .project-center {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media screen and (min-width: 1170px){
-  .project-center{
+@media screen and (min-width: 1170px) {
+  .project-center {
     grid-template-rows: 200px 200px;
     gap: 1rem;
-    grid-template-areas: 
-    "a b b"
-    "a c d";
+    grid-template-areas:
+      "a b b"
+      "a c d";
   }
-  .project{
+  .project {
     height: 100%;
   }
-  .project-img{
+  .project-img {
     height: 100%;
   }
-  .project-1{
+  .project-1 {
     grid-area: a;
   }
-  .project-2{
+  .project-2 {
     grid-area: b;
   }
-  .project-3{
+  .project-3 {
     grid-area: c;
   }
-  .project-5{
+  .project-5 {
     grid-area: d;
   }
 }
 /********CONNECT********/
-.title-connect{
-  color:black;
+.title-connect {
+  color: black;
   margin-bottom: 1.5rem;
 }
-.underline-connect{
+.underline-connect {
   width: 7rem;
   background: black;
 }
-
-.connect{
+.connect {
   min-height: 40rem;
   padding: 12rem 0 5rem 0;
   margin: 5rem 0;
@@ -533,45 +531,113 @@ h4 {
   place-items: center;
   position: relative;
   background: var(--clr-4);
-  clip-path: polygon(51% 0, 51% 0, 100% 15%, 100% 88%, 50% 100%, 49% 100%, 0 88%, 0 15%);
+  clip-path: polygon(
+    51% 0,
+    51% 0,
+    100% 15%,
+    100% 88%,
+    50% 100%,
+    49% 100%,
+    0 88%,
+    0 15%
+  );
 }
-
-.connect::after{
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: var(--clr-4);
-opacity: 0.7;
-z-index: -1;
+.connect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr-4);
+  opacity: 0.7;
+  z-index: -1;
 }
-.video-container{
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-z-index: -2;
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
 }
-.video-banner{
+.video-banner {
   background: var(--clr-2);
   text-align: center;
   padding: 3rem 5rem 12rem 5rem;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
 }
-.video-text{
+.video-text {
   max-width: 30rem;
   color: var(--clr-7);
 }
-.btn-connect{
+.btn-connect {
   margin-top: 2rem;
 }
+/*********SKILLS**********/
+.skills{
+  background: var(--clr-2);
+}
+.skills h3{
+  color:black;
+  margin: 1.5rem 0;
+}
+.skill{
+  margin-bottom: 1.5rem;
+}
+.skill p{
+  color:black;
+  margin-bottom: 0.5rem 0;
+}
 
+.skill-container{
+  background: var(--clr-7);
+  height: 1rem;
+  width: 100%;
+  border-radius: var(--radius);
+  position: relative;
+}
 
+.skill-value{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--clr-1);
+  height: 100%;
+  border-radius: var(--radius);
+}
 
+.value-40 {
+width: 40%;
+}
+.value-70 {
+  width: 70%;
+}
+.value-50 {
+  width: 50%;
+}
+.skill-text{
+ position: absolute; 
+ top: -2rem;
+ left: 50%;
+ transform: translate(-50%);
+}
+.skill-text-50{
+  left: 50%;
+}
 
-
-
+.skill-text-70{
+  left: 70%;
+}
+.skill-text-40{
+  left: 40%;
+}
