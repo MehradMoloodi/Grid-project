@@ -204,6 +204,7 @@ h4 {
   .nav-links {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 2rem;
     column-gap: 2rem;
     justify-items: center;
     justify-self: end;
@@ -273,6 +274,7 @@ h4 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
+  -moz-column-gap: 2rem;
   column-gap: 2rem;
   margin-top: 3rem;
 }
@@ -328,6 +330,7 @@ h4 {
   .hero-photo {
     max-width: 25rem;
     max-height: 30rem;
+    -o-object-fit: cover;
     object-fit: cover;
     border-radius: var(--radius);
     position: relative;
@@ -356,6 +359,7 @@ h4 {
 .about-photo {
   max-width: 25rem;
   max-height: 30rem;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: var(--radius);
   position: relative;
@@ -407,6 +411,7 @@ h4 {
   .services-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 2rem;
     column-gap: 2rem;
   }
 }
@@ -451,6 +456,7 @@ h4 {
   transition: var(--transition);
   border-radius: var(--radius);
   height: 15rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -535,6 +541,16 @@ h4 {
   place-items: center;
   position: relative;
   background: var(--clr-4);
+  -webkit-clip-path: polygon(
+    51% 0,
+    51% 0,
+    100% 15%,
+    100% 88%,
+    50% 100%,
+    49% 100%,
+    0 88%,
+    0 15%
+  );
   clip-path: polygon(
     51% 0,
     51% 0,
@@ -563,6 +579,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 104%;
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: -2;
 }
@@ -570,6 +587,15 @@ h4 {
   background: var(--clr-2);
   text-align: center;
   padding: 3rem 5rem 12rem 5rem;
+  -webkit-clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
   clip-path: polygon(
     0% 0%,
     100% 0%,
@@ -714,6 +740,7 @@ h4 {
 .card-side {
   position: absolute;
   transition: all 1.5s linear;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   top: 0;
   left: 0;
@@ -738,6 +765,7 @@ h4 {
 }
 .card-front img {
   height: 13rem;
+  -o-object-fit: cover;
   object-fit: cover;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
@@ -768,4 +796,26 @@ h4 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 3rem 1rem;
+}
+/*********FOOTER********/
+
+.footer {
+  padding-bottom: 2rem;
+  background: var(--clr-1);
+  color: var(--clr-7);
+  display: grid;
+  place-items: center;
+}
+
+.footer .social-icons {
+  margin-bottom: 2rem;
+}
+.footer .social-icon {
+  color: var(--clr-4);
+}
+.footer .social-icon:hover {
+  color: var(--clr-7);
+}
+.footer p {
+  font-size: 1rem;
 }
