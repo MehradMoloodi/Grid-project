@@ -739,7 +739,7 @@ h4 {
 }
 .card-side {
   position: absolute;
-  transition: all 1.5s linear;
+  transition: all 1.2s linear;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   top: 0;
